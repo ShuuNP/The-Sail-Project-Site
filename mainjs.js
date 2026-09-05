@@ -85,7 +85,7 @@ async function sendToDiscord(data){
   const payload = {
     content: '```json\n' + JSON.stringify(data, null, 2) + '\n```',
     embeds: [{
-      title: 'New Sail Project Application',
+      title: `New application from ${data.name}` ,
       color: 0xE8622C,
       fields: [
         { name: 'Creator / Account', value: data.name || '—', inline: true },
