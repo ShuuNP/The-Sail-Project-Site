@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sail Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mainstyle.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<div class="backdrop"></div>
+<div class="wave-layer">
+  <svg viewBox="0 0 1600 200" preserveAspectRatio="none">
+    <path class="wave-a" d="M0,90 C200,150 400,30 600,90 C800,150 1000,30 1200,90 C1400,150 1600,30 1600,90 L1600,200 L0,200 Z"></path>
+    <path class="wave-b" d="M0,120 C200,70 400,170 600,120 C800,70 1000,170 1200,120 C1400,70 1600,170 1600,120 L1600,200 L0,200 Z"></path>
+  </svg>
+</div>
+
+<div class="brand-mark"> The Sail Project</div>
+<div class="dots" id="dots"></div>
+
+<div class="boat-wrap">
+  <svg class="boat-bob" viewBox="0 0 150 110" width="130" height="96" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 78 Q75 100 130 78 L118 92 Q75 104 32 92 Z" fill="#5C3A21"/>
+    <rect x="72" y="18" width="3" height="60" fill="#3A2416"/>
+    <path d="M75 20 L75 62 L114 60 Z" fill="#FFF9F0" stroke="#3A2416" stroke-width="1.2"/>
+    <path d="M75 24 L75 58 L44 55 Z" fill="#FBC177" stroke="#3A2416" stroke-width="1.2"/>
+    <path d="M22 79 Q75 92 128 79" stroke="#7A5236" stroke-width="2" fill="none" opacity="0.5"/>
+  </svg>
+</div>
+
+<div class="stage">
+  <div class="box">
+    <div class="box-content">
+
+
+      <!-- PAGE 1: Concept -->
+      <div class="page active" data-page="0">
+        <div class="page-inner">
+          <p class="eyebrow">by the members of Sailing Through Lotuses</p>
+      
+          <h1 class="hero">
+            Every musician has a song still docked at the harbor.
+          </h1>
+      
+          <p class="lede">
+            Maybe it's an idea with no arrangement. A voice memo from two years ago.
+            Lyrics without a melody. An unfinished project that never quite made it
+            to the finish line. We're here to help you bring that song to life. :)
+          </p>
+      
+          <p class="band-tag">
+            This is a passion project by us. While our collaborations come at no cost,
+            we will put our time, creativity, and 100% effort into making your song
+            something we're proud to share with you.
+          </p>
+        </div>
+      </div>
+      
+      
+
+      <!-- PAGE 2: How it works -->
+      <div class="page" data-page="1">
+        <div class="page-inner">
+          <p class="eyebrow">How this works</p>
+          <h2 class="title">You bring the idea. We help it sail.</h2>
+
+          <p>
+            Send over the seed of a song — a melody, lyrics, a reference track, even just
+            a feeling you're chasing. We'll shape it together into something finished.
+          </p>
+
+          <p style="margin-top:14px;">
+            For now, we're focusing our collaborations on <strong>VTubers and content creators</strong>.
+            Whether you need an original song, an intro, an ending theme, or simply a song
+            you've always wanted to bring to life, we'd love to hear your idea.
+          </p>
+
+          <p style="margin-top:14px;">
+            This runs as a free service, in exchange for the room to build repertoire,
+            grow as musicians, and take on work we actually believe in.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- PAGE 3: Terms -->
+      <div class="page" data-page="2">
+        <div class="page-inner">
+          <p class="eyebrow">Before you apply</p>
+          <h2 class="title">A few honest terms</h2>
+          <ul class="terms"> 
+            
+            <li><strong>One song per application</strong> — We are only taking on a limited number of projects, so each collaboration is limited to one song.</li>
+
+            <li><strong>2+ month turnaround</strong> — Please allow at least two months for the project. This gives us enough time to work on the songwriting, arrangement, recording, and production without rushing the creative process.</li>
+            
+            <li><strong>Limited revisions</strong> — A limited number of revisions is included. Major changes to the song's concept, structure, or direction after the agreed-upon arrangement may not be accommodated.</li>
+            
+            <li><strong>Made by us, not AI</strong> — Every part of the creative process is personally handled by us. We guarantee that no generative AI tools will be used to create the songwriting, performances, or musical content of your song.</li>
+            
+            <li><strong>No rushed projects</strong> — We are doing this in our free time, so we cannot accommodate urgent deadlines or last-minute requests.</li>
+            
+            <li><strong>Limited availability</strong> — We will only work with 1–2 selected collaborators at a time. Submitting an application does not guarantee that your project will be accepted.</li>
+            
+            <li><strong>Style</strong> — Our primary styles are rock (Alt rock, Pop-rock, Hard Rock, Etc.. ). 
+              Acoustic-based compositions may also be considered depending on the project.</li> 
+          
+          </ul>
+
+          <p class="band-tag">
+            This is a collaboration, so expect contact and suggestions along the way. 
+            This is a two-way street between musicians to create music, 
+            so we should respect our responsibilities in the project.
+          </p>
+        </div>
+      </div>
+
+      <!-- PAGE 4: Application form -->
+      <div class="page" data-page="3">
+        <div class="page-inner">
+          <p class="eyebrow">Application</p>
+          <h2 class="title">Tell me about your song.</h2>
+          <form id="sailForm">
+            <div class="field"> 
+              <label for="name">Creator / Account Name</label> 
+              <input type="text" id="name" placeholder="Your VTuber, artist, or creator name"> 
+            </div>
+            <div class="field"> 
+              <label for="contact">Best way to reach you</label> 
+              <input type="text" id="contact" placeholder="Email, Discord, or social media handle"> 
+            </div>
+            <div class="field"> 
+              <label for="concept">What's your character's concept?</label> 
+              <textarea id="concept" placeholder="Tell us about your character, their personality, lore, aesthetic, or anything else that might help us understand them."></textarea> 
+            </div> 
+            <div class="field"> <label for="motivation">Why do you want to create a song?</label> 
+              <textarea id="motivation" placeholder="Tell us what the song means to you, what you want it to represent, or why you've been wanting to make one."></textarea> 
+            </div>
+            <div class="field">
+              <label for="idea">What's the song idea/content?</label>
+              <textarea id="idea" placeholder="A demo link, lyrics, a reference track, or just describe the feeling you're going for."></textarea>
+            </div>
+            <div class="field">
+              <label for="help">What kind of help does it need?</label>
+              <select id="help">
+                <option>Full song from scratch</option>
+                <option>Not sure yet — but i have ideas</option>
+              </select>
+            </div>
+      
+            <label class="checkline">
+              <input type="checkbox" id="agree">
+              I understand this is one song, limited revisions, with a 2+ month turnaround.
+            </label>
+            <p class="form-error" id="formError" style="display:none;">
+              Please fill in your name, contact info, and song idea, then check the agreement box before continuing.
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- PAGE 5: Confirmation -->
+      <div class="page" data-page="4">
+        <div class="page-inner">
+          <p class="eyebrow">Almost there</p>
+          <h2 class="title">Ready to cast off?</h2>
+          <p>
+            Please wait -- the application is directly sent to our discord and email. We will reach out if we chose to collaborate!
+          </p>
+          <p class="band-tag">Thank you for trusting a song still in the harbor to this project.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="box-footer">
+      <span class="step-label" id="stepLabel">1 / 5</span>
+      <div class="btn-row">
+        <button class="btn ghost" id="backBtn">Back</button>
+        <button class="btn" id="nextBtn">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mainjs.js"></script>
+
+
+</body>
+</html>
