@@ -129,6 +129,12 @@
     display:inline-block; margin-top:20px; font-size:0.9rem; color:var(--accent);
     border-top:1px solid rgba(var(--accent-rgb),0.3); padding-top:10px;
   }
+  .inline-link{
+    color:var(--accent); text-decoration:none; font-weight:500;
+    border-bottom:1px solid rgba(var(--accent-rgb),0.4);
+    transition: border-color 0.2s ease, opacity 0.2s ease;
+  }
+  .inline-link:hover{ border-color:var(--accent); opacity:0.85; }
 
   ul.terms{ list-style:none; padding:0; margin:16px 0 0; }
   ul.terms li{
@@ -153,6 +159,7 @@
   .field textarea{ resize:vertical; min-height:70px; }
   .checkline{ display:flex; align-items:flex-start; gap:9px; font-size:0.9rem; color:var(--ink-soft); }
   .checkline input{ margin-top:3px; width:auto; }
+  .form-error{ color:var(--accent); font-size:0.85rem; margin:2px 0 0; }
 
   /* ---------- Box footer / nav (scoped to box) ---------- */
   .box-footer{
