@@ -1,0 +1,56 @@
+/* ---------- Current Collaborators page ---------- */
+
+body{ overflow-y:auto; overflow-x:hidden; }
+
+.brand-link{ text-decoration:none; }
+
+.collab-stage{
+  position:relative; z-index:2;
+  max-width:1100px;
+  margin:0 auto;
+  padding:16vh 6vw 14vh;
+}
+
+.collab-header{ max-width:640px; margin-bottom:22px; }
+.collab-title{ margin-top:6px; margin-bottom:14px; }
+
+.collab-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:22px;
+  margin:32px 0 48px;
+}
+
+.collab-card{
+  background:var(--box-bg);
+  border:2px solid var(--box-line);
+  border-radius:3px;
+  padding:26px 22px;
+  box-shadow: 4px 4px 0 rgba(var(--ink-rgb),0.08);
+}
+
+.collab-card-placeholder{ opacity:0.7; border-style:dashed; }
+
+.collab-status{
+  display:inline-block;
+  font-size:0.72rem; text-transform:uppercase; letter-spacing:0.03em;
+  padding:4px 10px; border-radius:999px; margin-bottom:12px;
+  font-weight:600;
+}
+.status-brainstorming{ background:rgba(78,127,178,0.15); color:#2E5A85; }
+.status-writing{ background:rgba(216,72,31,0.15); color:#B23A1E; }
+.status-arranging{ background:rgba(143,90,20,0.15); color:#8F5A14; }
+.status-recording{ background:rgba(63,143,110,0.15); color:#276B4E; }
+.status-mixing{ background:rgba(150,90,180,0.15); color:#7A4A94; }
+.status-none{ background:rgba(var(--ink-rgb),0.06); color:var(--ink-soft); }
+.status-open{ background:rgba(var(--ink-rgb),0.08); color:var(--ink-soft); }
+
+.collab-name{ font-size:1.25rem; color:var(--ink); margin-bottom:10px; }
+.collab-blurb{ font-size:0.95rem; line-height:1.6; color:var(--ink-soft); }
+
+.back-link{ display:inline-block; }
+
+@media (max-width:640px){
+  .collab-stage{ padding:14vh 6vw 10vh; }
+  .collab-grid{ grid-template-columns: 1fr; }
+}
