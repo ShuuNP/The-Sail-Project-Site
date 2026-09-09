@@ -33,7 +33,15 @@
 </div>
 
 <div class="stage">
-  <div class="box">
+  <div class="box-wrap">
+    <div class="box-tabs" id="boxTabs">
+      <button class="box-tab" data-page-index="0"><span class="tab-emoji">✍️</span><span class="tab-label">Idea</span></button>
+      <button class="box-tab" data-page-index="1"><span class="tab-emoji">🧭</span><span class="tab-label">How it works</span></button>
+      <button class="box-tab" data-page-index="2"><span class="tab-emoji">📜</span><span class="tab-label">Terms</span></button>
+      <button class="box-tab" data-page-index="3"><span class="tab-emoji">🎸</span><span class="tab-label">Application</span></button>
+      <button class="box-tab" data-page-index="4"><span class="tab-emoji">🌊</span><span class="tab-label">Sail</span></button>
+    </div>
+    <div class="box">
     <div class="box-content">
 
 
@@ -41,6 +49,13 @@
       <div class="page active" data-page="0">
         <div class="page-inner">
           <p class="eyebrow">by the members of Sailing Through Lotuses</p>
+
+          <div class="status-banner">
+            <span class="status-dot"></span>
+            <span>Our queue is currently on hold while we finish our current collaborations —
+            applications are still open, but expect a longer wait before you hear back.
+            <a href="collaborators.html" class="inline-link">See who we're working with →</a></span>
+          </div>
       
           <h1 class="hero">
             Every musician has a song still docked at the harbor.
@@ -62,33 +77,34 @@
       
       
 
-     <!-- PAGE 2: How it works -->
-     <div class="page" data-page="1">
-      <div class="page-inner">
-        <p class="eyebrow">How this works</p>
-        <h2 class="title">You bring the idea. We help it sail.</h2>
+      <!-- PAGE 2: How it works -->
+      <div class="page" data-page="1">
+        <div class="page-inner">
+          <p class="eyebrow">How this works</p>
+          <h2 class="title">You bring the idea. We help it sail.</h2>
 
-        <p>
-          Send over the seed of a song — a melody, lyrics, a reference track, even just
-          a feeling you're chasing. We'll shape it together into something finished.
-        </p>
+          <p>
+            Send over the seed of a song — a melody, lyrics, a reference track, even just
+            a feeling you're chasing. We'll shape it together into something finished.
+          </p>
 
-        <p style="margin-top:14px;">
-          For now, we're focusing our collaborations on <strong>VTubers and content creators</strong>.
-          Whether you need an original song, an intro, an ending theme, or simply a song
-          you've always wanted to bring to life, we'd love to hear your idea.
-        </p>
+          <p style="margin-top:14px;">
+            For now, we're focusing our collaborations on <strong>VTubers and content creators</strong>.
+            Whether you need an original song, an intro, an ending theme, or simply a song
+            you've always wanted to bring to life, we'd love to hear your idea.
+          </p>
 
-        <p style="margin-top:14px;">
-          This runs as a free service, in exchange for the room to build repertoire,
-          grow as musicians, and take on work we actually believe in.
-        </p>
+          <p style="margin-top:14px;">
+            This runs as a free service, in exchange for the room to build repertoire,
+            grow as musicians, and take on work we actually believe in.
+          </p>
 
-        <p class="band-tag">
-          <a href="about.html" class="inline-link">Curious who's behind the project? Meet us →</a>
-        </p>
+          <p class="band-tag">
+            <a href="about.html" class="inline-link">Curious who's behind the harbor? Meet us →</a>
+          </p>
+        </div>
       </div>
-    </div>
+
 
       <!-- PAGE 3: Terms -->
       <div class="page" data-page="2">
@@ -99,9 +115,13 @@
             
             <li><strong>One song per application</strong> — We are only taking on a limited number of projects, so each collaboration is limited to one song.</li>
 
-            <li><strong>2+ month turnaround</strong> — Please allow at least two months for the project. This gives us enough time to work on the songwriting, arrangement, recording, and production without rushing the creative process.</li>
-            
-            <li><strong>Limited revisions</strong> — A limited number of revisions is included. Major changes to the song's concept, structure, or direction after the agreed-upon arrangement may not be accommodated.</li>
+            <li><strong>2+ month turnaround</strong> — Please allow at least two months for the project. This gives us enough time to work on the songwriting, arrangement, recording, and production without rushing the creative process.
+              <span class="term-note">Heads up: this is our confident baseline, not a fixed countdown — it's the timeframe we're comfortable committing to, not a guarantee it'll take exactly two months either way.</span>
+            </li>
+
+            <li><strong>Limited revisions</strong> — A limited number of revisions is included. Major changes to the song's concept, structure, or direction after the agreed-upon arrangement may not be accommodated.
+              <span class="term-note">Heads up: this applies as we're closing in on the finished song, not during the early stages — there's plenty of room to shape and adjust things together while we're still building it out.</span>
+            </li>
             
             <li><strong>Made by us, not AI</strong> — Every part of the creative process is personally handled by us. We guarantee that no generative AI tools will be used to create the songwriting, performances, or musical content of your song.</li>
             
@@ -127,6 +147,13 @@
         <div class="page-inner">
           <p class="eyebrow">Application</p>
           <h2 class="title">Tell me about your song.</h2>
+<!-- 
+          <div class="status-banner">
+            <span class="status-dot"></span>
+            <span>Heads up — our queue is on hold while we wrap up current projects, so
+            response times will be slower than usual. We're still reading every application.</span>
+          </div> -->
+
           <form id="sailForm">
             <div class="field"> 
               <label for="name">Creator / Account Name</label> 
@@ -151,8 +178,10 @@
               <label for="help">What kind of help does it need?</label>
               <select id="help">
                 <option>Full song from scratch</option>
-                <option>Instrumental / BGM </option>
-                <option>Not sure yet — but i have ideas</option>
+                <option>Instrumental/BGM</option>
+                <option>Lyrics only</option>
+                <option>Cover song</option>
+                <option>Others</option>
               </select>
             </div>
       
@@ -172,9 +201,7 @@
         <div class="page-inner">
           <p class="eyebrow">Almost there</p>
           <h2 class="title">Ready to cast off?</h2>
-          <p>
-            Please wait -- the application is directly sent to our discord and email. We will reach out if we chose to collaborate!
-          </p>
+          <p>Once you send this, sit tight — replies go out in the order they arrive, and given the pace of this project, it may take a little while to hear back. That's part of the deal.</p>
           <p class="band-tag">Thank you for trusting a song still in the harbor to this project.</p>
         </div>
       </div>
@@ -188,6 +215,7 @@
         <button class="btn" id="nextBtn">Next</button>
       </div>
     </div>
+  </div>
   </div>
 </div>
 <script src="mainjs.js"></script>
